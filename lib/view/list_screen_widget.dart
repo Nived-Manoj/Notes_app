@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note_8_11/model/note_model.dart';
+import 'package:note_8_11/utils/color_list.dart';
 
 class ListscreenWidgets extends StatefulWidget {
   final String title;

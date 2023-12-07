@@ -117,6 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           namecontroller.clear();
                           Descontroller.clear();
                           Datecontroller.clear();
+                          Navigator.pop(context);
                         },
                         child: Text("Save")),
                     Row(
