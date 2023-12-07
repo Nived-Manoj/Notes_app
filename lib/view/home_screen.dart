@@ -120,6 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         },
                         child: Text("Save")),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         // GridView.builder(
                         //   shrinkWrap: true,
@@ -138,20 +139,32 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 30,
                           color: MyColor.colorList[0],
                         ),
+                        SizedBox(
+                          width: 10,
+                        ),
                         Container(
                           height: 30,
                           width: 30,
                           color: MyColor.colorList[1],
+                        ),
+                        SizedBox(
+                          width: 10,
                         ),
                         Container(
                           height: 30,
                           width: 30,
                           color: MyColor.colorList[2],
                         ),
+                        SizedBox(
+                          width: 10,
+                        ),
                         Container(
                           height: 30,
                           width: 30,
                           color: MyColor.colorList[3],
+                        ),
+                        SizedBox(
+                          width: 10,
                         ),
                         Container(
                           height: 30,
