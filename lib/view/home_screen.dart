@@ -46,138 +46,115 @@ class _HomeScreenState extends State<HomeScreen> {
         onPressed: () {
           showModalBottomSheet(
             context: context,
-            builder: (context) => Container(
-              child: Padding(
-                padding: const EdgeInsets.all(25),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Container(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                      decoration: BoxDecoration(
-                          color: Color(0xFF9BBEC8),
-                          borderRadius: BorderRadius.circular(18)),
-                      child: TextField(
-                        controller: namecontroller,
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Title',
-                          hintStyle:
-                              TextStyle(fontSize: 21, color: Colors.black),
+            builder: (context) =>
+                StatefulBuilder(builder: (context, insetState) {
+              return Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(25),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                        decoration: BoxDecoration(
+                            color: Color(0xFF9BBEC8),
+                            borderRadius: BorderRadius.circular(18)),
+                        child: TextField(
+                          controller: namecontroller,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Title',
+                            hintStyle:
+                                TextStyle(fontSize: 21, color: Colors.black),
+                          ),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 40, horizontal: 20),
-                      decoration: BoxDecoration(
-                          color: Color(0xFF9BBEC8),
-                          borderRadius: BorderRadius.circular(18)),
-                      child: TextField(
-                        controller: Descontroller,
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Descriptiion',
-                          hintStyle:
-                              TextStyle(fontSize: 21, color: Colors.black),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+                        decoration: BoxDecoration(
+                            color: Color(0xFF9BBEC8),
+                            borderRadius: BorderRadius.circular(18)),
+                        child: TextField(
+                          controller: Descontroller,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Descriptiion',
+                            hintStyle:
+                                TextStyle(fontSize: 21, color: Colors.black),
+                          ),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 5, horizontal: 20),
-                      decoration: BoxDecoration(
-                          color: Color(0xFF9BBEC8),
-                          borderRadius: BorderRadius.circular(18)),
-                      child: TextField(
-                        controller: Datecontroller,
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'date',
-                          hintStyle:
-                              TextStyle(fontSize: 21, color: Colors.black),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                        decoration: BoxDecoration(
+                            color: Color(0xFF9BBEC8),
+                            borderRadius: BorderRadius.circular(18)),
+                        child: TextField(
+                          controller: Datecontroller,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'date',
+                            hintStyle:
+                                TextStyle(fontSize: 21, color: Colors.black),
+                          ),
                         ),
                       ),
-                    ),
-                    ElevatedButton(
-                        onPressed: () {
-                          noteModelList.add(NoteModel(
-                            title: namecontroller.text,
-                            date: Datecontroller.text,
-                            description: Descontroller.text,
-                          ));
-                          setState(() {});
-                          namecontroller.clear();
-                          Descontroller.clear();
-                          Datecontroller.clear();
-                          Navigator.pop(context);
-                        },
-                        child: Text("Save")),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        // GridView.builder(
-                        //   shrinkWrap: true,
-                        //   physics: NeverScrollableScrollPhysics(),
-                        //   gridDelegate:
-                        //       SliverGridDelegateWithFixedCrossAxisCount(
-                        //           crossAxisCount: MyColor.colorList.length),
-                        //   itemBuilder: (context, index) => Container(
-                        //     height: 30,
-                        //     width: 30,
-                        //     color: MyColor.colorList[index],
-                        //   ),
-                        // )
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: MyColor.colorList[0],
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: MyColor.colorList[1],
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: MyColor.colorList[2],
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: MyColor.colorList[3],
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: MyColor.colorList[4],
-                        ),
-                      ],
-                    ),
-                  ],
+                      ElevatedButton(
+                          onPressed: () {
+                            noteModelList.add(NoteModel(
+                              title: namecontroller.text,
+                              date: Datecontroller.text,
+                              description: Descontroller.text,
+                            ));
+                            setState(() {});
+                            namecontroller.clear();
+                            Descontroller.clear();
+                            Datecontroller.clear();
+                            Navigator.pop(context);
+                          },
+                          child: Text("Save")),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: List.generate(
+                                  MyColor.colorList.length,
+                                  (index) => Padding(
+                                        padding: const EdgeInsets.all(8),
+                                        child: InkWell(
+                                            onTap: () {
+                                              insetState(() {});
+                                            },
+                                            child: Container(
+                                              height: 30,
+                                              width: 30,
+                                              decoration: BoxDecoration(
+                                                  color:
+                                                      MyColor.colorList[index],
+                                                  borderRadius:
+                                                      BorderRadius.circular(8)),
+                                            )),
+                                      )),
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ),
+              );
+            }),
           );
         },
         child: Icon(

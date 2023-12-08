@@ -26,7 +26,7 @@ class _ListscreenWidgetsState extends State<ListscreenWidgets> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(35),
-          color: MyColor.colorList,
+          color: MyColor.colorList[index],
         ),
         padding: EdgeInsets.all(25),
         child: Column(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyColor {
-  final List<Color> colorList = [
+  static List<Color> colorList = [
     Colors.amber,
     Colors.blue,
     Colors.green,
