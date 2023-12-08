@@ -7,7 +7,14 @@ class ListscreenWidgets extends StatefulWidget {
   final String date;
   final String description;
   final void Function()? onTap;
-  const ListscreenWidgets(
+  final List<Color> colorList = [
+    Colors.amber,
+    Colors.blue,
+    Colors.green,
+    Colors.purple,
+    Colors.orange,
+  ];
+  ListscreenWidgets(
       {required this.title,
       required this.date,
       required this.description,
@@ -24,7 +31,8 @@ class _ListscreenWidgetsState extends State<ListscreenWidgets> {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(35), color: Colors.greenAccent),
+          borderRadius: BorderRadius.circular(35),
+        ),
         padding: EdgeInsets.all(25),
         child: Column(
           children: [
