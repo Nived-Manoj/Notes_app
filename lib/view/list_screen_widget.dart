@@ -7,13 +7,7 @@ class ListscreenWidgets extends StatefulWidget {
   final String date;
   final String description;
   final void Function()? onTap;
-  final List<Color> colorList = [
-    Colors.amber,
-    Colors.blue,
-    Colors.green,
-    Colors.purple,
-    Colors.orange,
-  ];
+
   ListscreenWidgets(
       {required this.title,
       required this.date,
@@ -32,6 +26,7 @@ class _ListscreenWidgetsState extends State<ListscreenWidgets> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(35),
+          color: MyColor.colorList,
         ),
         padding: EdgeInsets.all(25),
         child: Column(
