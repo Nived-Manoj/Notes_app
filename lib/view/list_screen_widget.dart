@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_8_11/model/note_model.dart';
+
 import 'package:note_8_11/utils/color_list.dart';
 
 class ListscreenWidgets extends StatefulWidget {
@@ -26,7 +26,7 @@ class _ListscreenWidgetsState extends State<ListscreenWidgets> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(35),
-          color: MyColor.colorList[index],
+          //color: MyColor.colorList[index],
         ),
         padding: EdgeInsets.all(25),
         child: Column(
