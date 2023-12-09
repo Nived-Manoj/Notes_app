@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 import 'package:note_8_11/utils/color_list.dart';
@@ -19,6 +21,11 @@ class ListscreenWidgets extends StatefulWidget {
 }
 
 class _ListscreenWidgetsState extends State<ListscreenWidgets> {
+  RandomColor() {
+    Random random = Random();
+    return colorList[random.nextInt(colorList.length)];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,7 +33,7 @@ class _ListscreenWidgetsState extends State<ListscreenWidgets> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(35),
-          //color: MyColor.colorList[index],
+          color: RandomColor(),
         ),
         padding: EdgeInsets.all(25),
         child: Column(

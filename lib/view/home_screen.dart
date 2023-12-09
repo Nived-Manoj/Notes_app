@@ -13,7 +13,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List<NoteModel> noteModelList = [
-    NoteModel(title: "New List", date: 'date', description: "description"),
+    NoteModel(title: "New List", date: 'date', description: "Description"),
   ];
   final namecontroller = TextEditingController();
   final Descontroller = TextEditingController();
@@ -129,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: List.generate(
-                                  MyColor.colorList.length,
+                                  colorList.length,
                                   (index) => Padding(
                                         padding: const EdgeInsets.all(8),
                                         child: InkWell(
@@ -140,8 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               height: 30,
                                               width: 30,
                                               decoration: BoxDecoration(
-                                                  color:
-                                                      MyColor.colorList[index],
+                                                  color: colorList[index],
                                                   borderRadius:
                                                       BorderRadius.circular(8)),
                                             )),
